@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: metaaarsim-prog/skola-sait
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "vesti"
+    label: "Obaveštenja"
+    folder: "_vesti"
+    create: true
+    fields:
+      - {label: "Naslov", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Tekst vesti", name: "body", widget: "markdown"}
+  
+  - name: "arhiva"
+    label: "Digitalna Arhiva"
+    folder: "_arhiva"
+    create: true
+    fields:
+      - {label: "Godina generacije", name: "title", widget: "string"}
+      - {label: "Slika", name: "image", widget: "image"}
+      - {label: "Opis", name: "body", widget: "markdown"}
