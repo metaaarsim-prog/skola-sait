@@ -1,4 +1,4 @@
-      backend:
+backend:
   name: github
   repo: metaaarsim-prog/skola-sait
   branch: main
@@ -9,20 +9,39 @@ media_folder: "images"
 public_folder: "images"
 
 collections:
+  - name: "naslovna"
+    label: "Naslovna strana"
+    files:
+      - label: "Glavni tekst i slika"
+        name: "hero"
+        file: "index.html"
+        fields:
+          - {label: "Glavni Naslov", name: "hero_title", widget: "string"}
+          - {label: "Podnaslov", name: "hero_subtitle", widget: "string"}
+          - {label: "Naslovna slika", name: "naslovna", widget: "image"}
+
   - name: "vesti"
     label: "Obaveštenja"
     folder: "_vesti"
     create: true
     fields:
-      - {label: "Naslov", name: "title", widget: "string"}
+      - {label: "Naslov vesti", name: "title", widget: "string"}
       - {label: "Datum", name: "date", widget: "datetime"}
       - {label: "Tekst vesti", name: "body", widget: "markdown"}
-  
+
   - name: "arhiva"
     label: "Digitalna Arhiva"
     folder: "_arhiva"
     create: true
     fields:
-      - {label: "Godina generacije", name: "title", widget: "string"}
+      - {label: "Generacija (npr. 1926)", name: "title", widget: "string"}
+      - {label: "Slika generacije", name: "image", widget: "image"}
+      - {label: "Opis", name: "body", widget: "text"}
+
+  - name: "galerija"
+    label: "Galerija slika"
+    folder: "images/galerija"
+    create: true
+    fields:
+      - {label: "Naziv slike", name: "title", widget: "string"}
       - {label: "Slika", name: "image", widget: "image"}
-      - {label: "Opis", name: "body", widget: "markdown"}
