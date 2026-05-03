@@ -1,7 +1,9 @@
-backend:
+      backend:
   name: github
   repo: metaaarsim-prog/skola-sait
   branch: main
+  base_url: https://github.com
+  auth_endpoint: api/auth
 
 media_folder: "images"
 public_folder: "images"
